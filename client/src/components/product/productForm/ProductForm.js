@@ -7,37 +7,15 @@ import "./ProductForm.scss";
 
 const ProductForm = ({
   product,
-  productImage,
-  imagePreview,
   description,
   setDescription,
   handleInputChange,
-  handleImageChange,
   saveProduct,
 }) => {
   return (
     <div className="add-product">
       <Card cardClass={"card"}>
         <form onSubmit={saveProduct}>
-          <Card cardClass={"group"}>
-            <label>Product Image</label>
-            <code className="--color-dark">
-              Supported Formats: jpg, jpeg, png
-            </code>
-            <input
-              type="file"
-              name="image"
-              onChange={(e) => handleImageChange(e)}
-            />
-
-            {imagePreview != null ? (
-              <div className="image-preview">
-                <img src={imagePreview} alt="product" />
-              </div>
-            ) : (
-              <p>No image set for this poduct.</p>
-            )}
-          </Card>
           <label>Product Name:</label>
           <input
             type="text"
@@ -53,15 +31,6 @@ const ProductForm = ({
             placeholder="Product Category"
             name="category"
             value={product?.category}
-            onChange={handleInputChange}
-          />
-
-          <label>Product Price:</label>
-          <input
-            type="text"
-            placeholder="Product Price"
-            name="price"
-            value={product?.price}
             onChange={handleInputChange}
           />
 
