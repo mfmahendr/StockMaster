@@ -7,7 +7,7 @@ const Home = () => {
       <h1 className="text-4xl font-bold mb-6">Welcome to My App</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-white rounded-lg shadow p-6">
-          <img src="gambar1.jpg" alt="Gambar 1" className="w-32 h-32 mb-4" />
+          <img src="client/src/assets/stoccounting.png" alt="Stoccounting-Illustration" className="w-32 h-32 mb-4" />
           <h2 className="text-lg font-bold mb-2">Stoccounting</h2>
           <p className="text-gray-600 mb-4">Lihat keuanganmu di sini</p>
           <Link
