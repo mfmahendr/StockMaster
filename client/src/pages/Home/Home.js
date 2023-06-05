@@ -2,7 +2,7 @@ import React from "react";
 import { RiProductHuntLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import "./Home.scss";
-import heroImg from "../../assets/inv-img.png";
+import heroImg from "../../assets/logo.png";
 import { ShowOnLogin, ShowOnLogout } from "../../components/protect/HiddenLink";
 
 const Home = () => {
@@ -13,7 +13,14 @@ const Home = () => {
           <RiProductHuntLine size={35} />
         </div>
 
-        <ul className="home-links">
+        
+      </nav>
+      {/* HERO SECTION */}
+      <section className="container hero">
+        <div className="hero-text">
+          <h2>Welcome to StockMaster</h2>
+
+          <ul className="home-links">
           <ShowOnLogout>
             <li>
               <Link to="/register">Register</Link>
@@ -34,16 +41,7 @@ const Home = () => {
             </li>
           </ShowOnLogin>
         </ul>
-      </nav>
-      {/* HERO SECTION */}
-      <section className="container hero">
-        <div className="hero-text">
-          <h2>Inventory {"&"} Stock Management Solution</h2>
-          <p>
-            Inventory system to control and manage proucts in the warehouse in
-            real timeand integrated to make it easier to develop your business.
-          </p>
-          <div className="hero-buttons">
+          {/* <div className="hero-buttons">
             <button className="--btn --btn-secondary">
               <Link to="/dashboard">Free Trial 1 Month</Link>
             </button>
@@ -52,12 +50,12 @@ const Home = () => {
             <NumberText num="14K" text="Brand Owners" />
             <NumberText num="23K" text="Active Users" />
             <NumberText num="500+" text="Partners" />
-          </div>
+          </div> */}
         </div>
 
         <div className="hero-image">
           <img src={heroImg} alt="Inventory" />
-        </div>
+        </div> *
       </section>
     </div>
   );
