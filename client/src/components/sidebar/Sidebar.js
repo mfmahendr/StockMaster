@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./Sidebar.scss";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { RiProductHuntLine } from "react-icons/ri";
+import { RiHome3Line } from "react-icons/ri";
 import menu from "../../data/sidebar";
 import SidebarItem from "./SidebarItem";
 import { useNavigate } from "react-router-dom";
+import heroImg from "../../assets/logo.png";
 
 const Sidebar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -20,7 +21,7 @@ const Sidebar = ({ children }) => {
       <div className="sidebar" style={{ width: isOpen ? "230px" : "60px" }}>
         <div className="top_section">
           <div className="logo" style={{ display: isOpen ? "block" : "none" }}>
-            <RiProductHuntLine
+            <RiHome3Line
               size={35}
               style={{ cursor: "pointer" }}
               onClick={goHome}

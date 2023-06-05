@@ -54,7 +54,7 @@ const ProductSummary = ({ products }) => {
           icon={categoryIcon}
           title={"All Categories"}
           count={category.length}
-          bgColor="card4"
+          bgColor="card2"
         />
       </div>
     </div>

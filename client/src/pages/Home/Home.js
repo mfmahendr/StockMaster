@@ -1,5 +1,5 @@
 import React from "react";
-import { RiProductHuntLine } from "react-icons/ri";
+import { RiHome3Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import "./Home.scss";
 import heroImg from "../../assets/logo.png";
@@ -10,7 +10,7 @@ const Home = () => {
     <div className="home">
       <nav className="container --flex-between ">
         <div className="logo">
-          <RiProductHuntLine size={35} />
+          <RiHome3Line size={35} />
         </div>
 
         
