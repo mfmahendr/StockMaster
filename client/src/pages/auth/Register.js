@@ -67,9 +67,6 @@ const Register = () => {
       {isLoading && <Loader />}
       <Card>
         <div className={styles.form}>
-          <div className="--flex-center">
-            <TiUserAddOutline size={35} color="#999" />
-          </div>
           <h2>Register</h2>
 
           <form onSubmit={register}>
