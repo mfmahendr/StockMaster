@@ -7,8 +7,6 @@ import "./ProductForm.scss";
 
 const ProductForm = ({
   product,
-  description,
-  setDescription,
   handleInputChange,
   saveProduct,
 }) => {
@@ -46,8 +44,7 @@ const ProductForm = ({
           <label>Product Description:</label>
           <ReactQuill
             theme="snow"
-            value={description}
-            onChange={setDescription}
+            value={product?.description}
             modules={ProductForm.modules}
             formats={ProductForm.formats}
           />

@@ -58,7 +58,7 @@ const EditProduct = () => {
     formData.append("category", product?.category);
     formData.append("quantity", product?.quantity);
     formData.append("price", product?.price);
-    formData.append("description", description);
+    formData.append("desc", description);
     if (productImage) {
       formData.append("image", productImage);
     }
