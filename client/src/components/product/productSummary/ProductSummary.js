@@ -15,7 +15,6 @@ import {
 } from "../../../redux/features/product/productSlice";
 
 // Icons
-const earningIcon = <AiFillDollarCircle size={40} color="#fff" />;
 const productIcon = <BsCart4 size={40} color="#fff" />;
 const categoryIcon = <BiCategory size={40} color="#fff" />;
 const outOfStockIcon = <BsCartX size={40} color="#fff" />;
@@ -27,12 +26,10 @@ export const formatNumbers = (x) => {
 
 const ProductSummary = ({ products }) => {
   const dispatch = useDispatch();
-  const totalStoreValue = useSelector(selectTotalStoreValue);
   const outOfStock = useSelector(selectOutOfStock);
   const category = useSelector(selectCategory);
 
   useEffect(() => {
-    dispatch(CALC_STORE_VALUE(products));
     dispatch(CALC_OUTOFSTOCK(products));
     dispatch(CALC_CATEGORY(products));
   }, [dispatch, products]);
@@ -46,12 +43,6 @@ const ProductSummary = ({ products }) => {
           title={"Total Products"}
           count={products.length}
           bgColor="card1"
-        />
-        <InfoBox
-          icon={earningIcon}
-          title={"Total Store Value"}
-          count={`$${formatNumbers(totalStoreValue.toFixed(2))}  `}
-          bgColor="card2"
         />
         <InfoBox
           icon={outOfStockIcon}
