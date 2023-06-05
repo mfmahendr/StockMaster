@@ -11,6 +11,18 @@ const menu = [
     title: "Add Product",
     icon: <BiImageAdd />,
     path: "/add-product",
+  },
+  {
+    title: "Live Chat",
+    path: "/",
+  },
+  {
+    title: "Bot Supplier",
+    path: "/",
+  },
+  {
+    title: "Sistem Keuangan",
+    path: "/"
   }
 ];
 
