@@ -24,7 +24,7 @@ const productSchema = new mongoose.Schema(
     },
     desc: {
       type: String,
-      required: [true, "Please add a description"],
+      required: [false, "Please add a description"],
       default: "no description yet",
       trim: true,
     },
